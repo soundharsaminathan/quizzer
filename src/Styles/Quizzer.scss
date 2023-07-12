@@ -34,4 +34,22 @@
             border:#163353 10px solid;
         }
     }
+    .instruction-container{
+        margin-left: 28%;
+        margin-top: 1%;
+        border-radius: 50px;
+        position: relative;
+        width: 40%;
+        padding: 20px;
+        background: linear-gradient(256.73deg, #3A3939 15.58%, rgba(36, 36, 36, 0.51883) 59.51%, rgba(0, 0, 0, 0) 106.87%);
+        color: #FFFFFF;
+        h1{
+            font-size: 50px;
+        }
+        ul{
+            font-size: 50px;
+            box-shadow: 0px 4px 4px 0px #00000040;
+        }
+    }
+
 }
