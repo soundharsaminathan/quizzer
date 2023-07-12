@@ -1,6 +1,6 @@
 import * as THREE from "three"
 import { useFrame, useThree } from "@react-three/fiber"
-import { Box, Sphere } from "@react-three/drei"
+import { Sphere } from "@react-three/drei"
 import { RigidBody } from "@react-three/rapier"
 import { useRef } from "react"
 

@@ -4,7 +4,8 @@ import Quizzer from "./Pages/Quizzer"
 
 const App = () => {
   return (
-      <Quizzer/>
+      // <Quizzer/>
+      <Quiz/>
   )
 }
 
