@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber"
 import { Environment, OrbitControls, Sphere } from "@react-three/drei"
 import Options from "../Views/Options"
 import Question from "../Views/Question"
+import HealthMeter from "../Modals/HealthMeter"
 
 // import styles from '../Quiz.scss'
 
@@ -19,6 +20,7 @@ const Quiz = () => {
                 <Options/>
             </Canvas>
             <Question/>
+            <HealthMeter />
         </>
     )
 }
