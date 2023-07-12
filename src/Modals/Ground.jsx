@@ -15,7 +15,7 @@ const Ground = () => {
         position={[0, -(viewport.height/2)+2, 0]}
       >
         <mesh>
-          <boxGeometry args={[viewport.width+2, 3, 4]} />
+          <boxGeometry args={[viewport.width+2, 0.1, 4]} />
           <meshStandardMaterial color="lightblue" />
         </mesh>
       </RigidBody>
