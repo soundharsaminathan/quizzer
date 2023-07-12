@@ -1,4 +1,4 @@
-import "../styles/question.scss";
+import "../Styles/question.scss";
 
 const Question = () => {
     return(
