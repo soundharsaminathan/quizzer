@@ -11,6 +11,10 @@ const Quizzer = () => {
                     <img src={imgMainPage} className='main-img'></img>
                     <img src={quizzerText} className='quizzer-text'></img>
                 </div>
+                <div className='btn-container'>
+                    <button>Start</button>
+                    <button className='btn-leaderboard' disabled={true}>Leaderboard</button>
+                </div>
             </div>
         </>
     )

@@ -2,14 +2,36 @@
     .img-container{
        .main-img{
             position: absolute;
-            height: fit-content;
+            height: 100%;
             width: 100%;
        }
        .quizzer-text{
         position: relative;
-        height: fit-content;
-        width: fit-content;
-        bottom: 30%;
+        height: 25%;
+        width: 20%;
+        left: 40%;
+        margin-top: 3%;
        }
+    }
+    .btn-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        z-index: 100px;
+        button{
+            margin-top: 10%;
+            height: 180px;
+            width: 600px;
+            margin-right: 1%;
+            border-radius: 150px;
+            font-size:50px;
+            color: white;
+            background: #163353;
+        }
+        .btn-leaderboard{
+            background-color: transparent;
+            border:#163353 10px solid;
+        }
     }
 }
