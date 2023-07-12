@@ -1,12 +1,10 @@
 import { RigidBody } from "@react-three/rapier"
+import { RoundedBox } from "@react-three/drei";
 
 const Brick = ({ position, color }) => (
-    <RigidBody colliders="cuboid" type="fixed" position={position} restitution={2.1}>
-      <mesh>
-        <boxGeometry args={[2.5, 1, 1]} />
-        <meshStandardMaterial color={color} />
-      </mesh>
-    </RigidBody>
+      <RoundedBox args={[5, 2, 1]} position={position} radius={0.2} >
+        <meshLambertMaterial attach="material" color={color} />
+      </RoundedBox>
 )
 
 export default Brick;

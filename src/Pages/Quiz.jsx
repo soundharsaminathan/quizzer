@@ -8,12 +8,12 @@ import Question from "../Views/Question"
 const Quiz = () => {
     return(
         <>
-            <Canvas camera={{ position: [0, 4, 16], fov: 50 }}>
+            <Canvas orthographic camera={{ position: [0, 0, 16], top:16, bottom:-16, left:16, right:-16, zoom:50 }}>
             {/* <Sphere receiveShadow={false} castShadow={false} position={[-9, 0, 0]}>
                 <meshStandardMaterial color="hotpink" />
             </Sphere> */}
                 <ambientLight intensity={0.3}  />
-                {/* <OrbitControls/> */}
+                <OrbitControls/>
                 <pointLight position={[10, 8, 0]} color={"white"} />
                 {/* <Environment preset="warehouse" background /> */}
                 <Options/>

@@ -12,7 +12,7 @@ const Ground = () => {
         colliders="cuboid"
         type="fixed"
         restitution={0.1}
-        position={[0, -(viewport.height/2)+1.5, 0]}
+        position={[0, -(viewport.height/2)+2, 0]}
       >
         <mesh>
           <boxGeometry args={[viewport.width+2, 3, 4]} />
