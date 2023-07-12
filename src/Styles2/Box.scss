@@ -1,14 +1,10 @@
 .box {
-    width: 260px;
-    height: 131px;
+    position: absolute;
+    width: 200px;
+    height: 100px;
     background: rgb(224,255,0);
     background: linear-gradient(10deg, rgba(225, 255, 0, 0.132) 0%,  rgba(0, 0, 0, 0.307) 5%,rgba(0, 0, 0, 0.507) 100%);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(8px);
-    border-radius: 60px;
-    // background: linear-gradient(yellow, black);
-    // border-radius: 10px;
-    // backdrop-filter: blur(10px);
-    // -webkit-backdrop-filter: blur(10px);
-    // border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
 }

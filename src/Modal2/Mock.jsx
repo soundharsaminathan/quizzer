@@ -7,7 +7,10 @@ const Mock = () => {
         <>
             <div className="floor">
                 <Ball />
-                <Box />
+                <Box position={[10, 50]} />
+                <Box position={[30, 50]} />
+                <Box position={[55, 50]} />
+                <Box position={[80, 50]} />
             </div>
         </>
     )
