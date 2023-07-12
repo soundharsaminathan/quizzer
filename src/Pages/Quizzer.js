@@ -2,8 +2,11 @@ import React from 'react'
 import "../Styles/Quizzer.scss"
 import imgMainPage from "../Resources/mainpage.jpg"
 import quizzerText from "../Resources/QuizzerText.png"
+import { useNavigate } from "react-router-dom";
+
 
 const Quizzer = () => {
+    const navigate = useNavigate();
     return(
         <>
             <div className='main-page'>
@@ -12,7 +15,7 @@ const Quizzer = () => {
                     <img src={quizzerText} className='quizzer-text'></img>
                 </div>
                 <div className='btn-container'>
-                    <button>Start</button>
+                    <button onClick={ () => navigate('/quiz')}>Start</button>
                     <button className='btn-leaderboard' disabled={true}>Leaderboard</button>
                 </div>
                 <div className='instruction-container'>

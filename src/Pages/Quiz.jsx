@@ -14,7 +14,7 @@ const Quiz = () => {
                 <meshStandardMaterial color="hotpink" />
             </Sphere> */}
                 <ambientLight intensity={0.3}  />
-                <OrbitControls/>
+              
                 <pointLight position={[10, 8, 0]} color={"white"} />
                 {/* <Environment preset="warehouse" background /> */}
                 <Options/>
