@@ -1,6 +1,6 @@
 import React from 'react'
 import "../Styles/Quizzer.scss"
-import imgMainPage from "../Resources/mainpage.png"
+import imgMainPage from "../Resources/mainpage.jpg"
 import quizzerText from "../Resources/QuizzerText.png"
 
 const Quizzer = () => {
