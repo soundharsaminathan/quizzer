@@ -10,7 +10,7 @@
         height: 25%;
         width: 20%;
         left: 40%;
-        margin-top: 3%;
+        margin-top: 7%;
        }
     }
     .btn-container{
@@ -20,23 +20,23 @@
         position: relative;
         z-index: 100px;
         button{
-            margin-top: 10%;
-            height: 180px;
-            width: 600px;
+            margin-top: 5%;
+            height: 50px;
+            width: 250px;
             margin-right: 1%;
             border-radius: 150px;
-            font-size:50px;
+            font-size:20px;
             color: white;
             background: #163353;
         }
         .btn-leaderboard{
             background-color: transparent;
-            border:#163353 10px solid;
+            border:#163353 5px solid;
         }
     }
     .instruction-container{
-        margin-left: 28%;
-        margin-top: 1%;
+        margin-left: 30%;
+        margin-top: 2%;
         border-radius: 50px;
         position: relative;
         width: 40%;
@@ -44,11 +44,14 @@
         background: linear-gradient(256.73deg, #3A3939 15.58%, rgba(36, 36, 36, 0.51883) 59.51%, rgba(0, 0, 0, 0) 106.87%);
         color: #FFFFFF;
         h1{
-            font-size: 50px;
+            font-size: 20px;
         }
         ul{
-            font-size: 50px;
+            font-size: 20px;
             box-shadow: 0px 4px 4px 0px #00000040;
+            li{
+                padding: 4px;
+            }
         }
     }
 
