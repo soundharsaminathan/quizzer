@@ -5,11 +5,14 @@ import Brick from "../Modals/Brick";
 
 const Options = () =>{
     return (
+
+        <>
     <Physics gravity={[0, -30, 0]}>
         <Ball />
-        <Brick />
+        <Brick position={[-10,0,0]} />
         <Ground />
     </Physics>
+        </>
     );
 }
 

@@ -19,13 +19,14 @@ const Ball = ({ euler = new THREE.Euler(), quaternion = new THREE.Quaternion() }
           ref={ref}
           colliders="ball"
           mass={1}
+          position={[-viewport.width/2+1, 0, 0]}
           // type="fixed"
           // position={[0, 0, 0]}
           // position={[-viewport.width/2 + 1.75, 0, 0]}
           // rotation={[Math.PI / 2, 0, 0]}
           // rotation={{x:0,y:0,z:0}}
         >
-        <Sphere rotateOnAxis={{axis:'x'}} s args={[0.7]} position={[-viewport.width/2+1, 0, -3]}>
+        <Sphere args={[0.7]}>
           <meshStandardMaterial color="hotpink" />
         </Sphere>
           {/* <mesh castShadow receiveShadow>
