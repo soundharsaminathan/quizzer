@@ -7,16 +7,26 @@ import { useState } from "react";
 const Mock = () => {
     const ref = useRef(null);
     const [position, setPosition] = useState(80);
+    const [isKeyDown, setIsKeyDown] = useState(false);
     useEffect(()=>{
         document.addEventListener('keydown',detectKey, true);
+        document.addEventListener('keyup',releaseKey, true);
     })
     const detectKey = (e) =>{
-        console.log(e.key,"hh",ref.current?.offsetWidth)
-        if(e.key == "ArrowRight"){
-            setPosition(position + 160);
-        } else if (e.key == "ArrowLeft"){
-            setPosition(position - 160);
+        if(isKeyDown){
+            return;
         }
+        console.log("hh",ref.current?.offsetWidth,position)
+        const width = ref.current?.offsetWidth;
+        if(e.key == "ArrowRight" && position+100 < width){
+            setPosition(position + (width / 10));
+        } else if (e.key == "ArrowLeft" && position > (width / 10)){
+            setPosition(position - (width/10));
+        }
+        setIsKeyDown(true)
+    }
+    const releaseKey = () => {
+        setIsKeyDown(false)
     }
     return (
         <>
