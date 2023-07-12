@@ -13,7 +13,7 @@ const Box = ({answer, position}) => {
 
     return (
         <div className="box" style={styles}>
-            <p>{answer}</p>    
+            <span>{answer}</span>    
         </div>
     )
 }

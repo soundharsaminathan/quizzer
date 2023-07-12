@@ -25,7 +25,7 @@ const Quiz = () => {
                 <Mock />
                 <HealthMeter />
             </div>
-            <div><Question/></div>
+            <Question/>
         </>
     )
 }
