@@ -25,7 +25,7 @@ const Ball = ({ euler = new THREE.Euler(), quaternion = new THREE.Quaternion() }
           // rotation={[Math.PI / 2, 0, 0]}
           // rotation={{x:0,y:0,z:0}}
         >
-        <Sphere rotateOnAxis={{axis:'x'}} s args={[0.7]} position={[-viewport.width/2+1, 0, 0]}>
+        <Sphere rotateOnAxis={{axis:'x'}} s args={[0.7]} position={[-viewport.width/2+1, 0, -3]}>
           <meshStandardMaterial color="hotpink" />
         </Sphere>
           {/* <mesh castShadow receiveShadow>

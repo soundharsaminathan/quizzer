@@ -10,15 +10,15 @@ const Quiz = () => {
         <>
             <Canvas camera={{ position: [0, 4, 16], fov: 50 }}>
             {/* <Sphere receiveShadow={false} castShadow={false} position={[-9, 0, 0]}>
-            <meshStandardMaterial color="hotpink" />
-          </Sphere> */}
+                <meshStandardMaterial color="hotpink" />
+            </Sphere> */}
                 <ambientLight intensity={0.3}  />
-                <OrbitControls/>
+                {/* <OrbitControls/> */}
                 <pointLight position={[10, 8, 0]} color={"white"} />
                 {/* <Environment preset="warehouse" background /> */}
                 <Options/>
             </Canvas>
-            {/* <Question/> */}
+            <Question/>
         </>
     )
 }
