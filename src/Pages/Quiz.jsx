@@ -14,7 +14,7 @@ const Quiz = () => {
         <>
             <div className="canvas">
                 <div className="time-counter">
-                    <Timer delayResend="899"/>
+                    {/* <Timer delayResend="899"/> */}
                 </div>
                 {/* <Canvas orthographic camera={{ position: [0, 0, 16], top:16, bottom:-16, left:16, right:-16, zoom:50 }}>
                     <ambientLight intensity={0.3}  />
@@ -23,7 +23,7 @@ const Quiz = () => {
                     <Options/>
                 </Canvas> */}
                 <Mock />
-                <HealthMeter />
+                {/* <HealthMeter /> */}
             </div>
             <Question/>
         </>
