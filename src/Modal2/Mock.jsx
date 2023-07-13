@@ -8,34 +8,57 @@ const Mock = () => {
     const ref = useRef(null);
     const [position, setPosition] = useState(80);
     const [isKeyDown, setIsKeyDown] = useState(false);
-    const [bounce, setBounce] = useState(false);
+    const [bounce, setBounce] = useState(0);
+    const [isBounce, setIsBounce] = useState(false);
 
     useEffect(()=>{
         document.addEventListener('keydown',detectKey, true);
-        document.addEventListener('keyup',releaseKey, true);
+        // document.addEventListener('keyup',releaseKey, true);
     })
     const detectKey = (e) =>{
+        console.log(position,"bounce",isBounce)
         if(isKeyDown){
             return;
         }
-        console.log("hh",ref.current?.offsetWidth,position)
-        const width = ref.current?.offsetWidth;
-        if(e.key == "ArrowRight" && position+100 < width){
-            setPosition(position + (width / 10));
-        } else if (e.key == "ArrowLeft" && position > (width / 10)){
-            setPosition(position - (width/10));
-        } else if (e.key == "ArrowUp"){
-            setBounce(true)
+        else{
+            console.log(position,isBounce, '--2')
+            const width = ref.current?.offsetWidth;
+            if(e.key == "ArrowRight" && position+100 < width && !isBounce){
+                setPosition(position + (width / 10));
+            } else if (e.key == "ArrowLeft" && position > (width / 10) && !isBounce){
+                setPosition(position - (width/10));
+            } else if (e.key == "ArrowUp"){
+                if(position == 80 + (width/10) || position > 80 + 6*(width/10))
+                {
+                    setBounce(-125)
+                }
+                else{
+                    setBounce(-230)
+                }
+                // setIsBounce(true)
+                // setTimeout(()=>{
+                //     // setIsBounce(false)
+                //     setBounce(0)
+                //     console.log("isBounce : f")
+                // }, 2900);
+            }
         }
         setIsKeyDown(true)
     }
-    const releaseKey = () => {
-        setIsKeyDown(false)
-    }
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setIsKeyDown(false)
+        }, 1000)
+    },[isKeyDown])
+
+    // const releaseKey = () => {
+    //     setIsKeyDown(false)
+    // }
     return (
         <>
             <div ref={ref} className="floor">
-                <Ball position={position} bounce={bounce}/>
+                <Ball position={position} bounce={bounce} setBounce={setBounce} setIsBounce={setIsBounce}/>
                 <Box position={[10, 50]} answer={"Option 1"}/>
                 <Box position={[30, 30]} answer={"Option 2"}/>
                 <Box position={[50, 30]} answer={"Option 3"}/>
