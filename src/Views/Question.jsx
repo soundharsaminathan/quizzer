@@ -1,9 +1,10 @@
 import "../Styles/question.scss";
 
-const Question = () => {
+const Question = ({question}) => {
+    console.log(question);
     return(
         <div className="question-container">
-            <p>What are the elements that cannot be added to a flexible journey?</p>
+            <p>{question}</p>
         </div>
     )
 }
