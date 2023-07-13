@@ -1,6 +1,6 @@
 import "../Styles2/Box.scss";
 
-const Box = ({answer, position}) => {
+const Box = ({position, option, isSelected}) => {
 
     const styles = {
         left: `${position[0]}%`,
@@ -8,8 +8,8 @@ const Box = ({answer, position}) => {
     };
 
     return (
-        <div className="box" style={styles}>
-            <span>{answer}</span>    
+        <div className={"box " + (isSelected && "selected")} style={styles}>
+            <span>{option}</span>    
         </div>
     )
 }

@@ -5,11 +5,13 @@ import HealthMeter from "../Modals/HealthMeter"
 import "../Styles/Quiz.scss"
 import Mock from "../Modal2/Mock"
 import Timer from "../Modals/Timer"
+import { questions } from "../Questions/QuestionBank"
+import { useState } from "react"
 
 // import styles from '../Quiz.scss'
 
 const Quiz = () => {
-
+    const [questionNumber, setQuestionNumber] = useState(0);
     return(
         <>
             <div className="canvas">
@@ -22,10 +24,14 @@ const Quiz = () => {
                     <pointLight position={[10, 8, 0]} color={"white"} />
                     <Options/>
                 </Canvas> */}
-                <Mock />
+                        
+                    <Mock questionNumber={questionNumber} />
+                    <div style={{position: "absolute", bottom: "50px", zIndex: "10" ,right:"10px", display: "flex", gap:"20px"}}>
+                        <button onClick={()=>{setQuestionNumber(0)}}>prev</button>
+                        <button onClick={()=>{setQuestionNumber(1)}}>next</button>
+                    </div>
                 {/* <HealthMeter /> */}
             </div>
-            <Question/>
         </>
     )
 }
