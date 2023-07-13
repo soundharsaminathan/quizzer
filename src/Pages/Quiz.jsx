@@ -6,18 +6,29 @@ import "../Styles/Quiz.scss"
 import Mock from "../Modal2/Mock"
 import Timer from "../Modals/Timer"
 import { questions } from "../Questions/QuestionBank"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import arrowImage from "../Resources/arrowImage.png"
 
+import Loader from "./Loader"
 
 // import styles from '../Quiz.scss'
 
 const Quiz = () => {
     const [questionNumber, setQuestionNumber] = useState(0);
     const[gameState, setGameSet] = useState("");
-    return(
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulating async data fetching
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
+    return (
         <>
             <div className={`red-bg-${gameState}`}></div>
+            {isLoading && <Loader />}
             <div className="canvas">
                 <div className="time-counter">
                     <Timer delayResend="899"/>
