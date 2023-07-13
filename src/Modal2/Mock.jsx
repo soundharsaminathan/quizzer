@@ -8,6 +8,8 @@ const Mock = () => {
     const ref = useRef(null);
     const [position, setPosition] = useState(80);
     const [isKeyDown, setIsKeyDown] = useState(false);
+    const [bounce, setBounce] = useState(false);
+
     useEffect(()=>{
         document.addEventListener('keydown',detectKey, true);
         document.addEventListener('keyup',releaseKey, true);
@@ -22,6 +24,8 @@ const Mock = () => {
             setPosition(position + (width / 10));
         } else if (e.key == "ArrowLeft" && position > (width / 10)){
             setPosition(position - (width/10));
+        } else if (e.key == "ArrowUp"){
+            setBounce(true)
         }
         setIsKeyDown(true)
     }
@@ -31,7 +35,7 @@ const Mock = () => {
     return (
         <>
             <div ref={ref} className="floor">
-                <Ball position={position}/>
+                <Ball position={position} bounce={bounce}/>
                 <Box position={[10, 50]} answer={"Option 1"}/>
                 <Box position={[30, 30]} answer={"Option 2"}/>
                 <Box position={[50, 30]} answer={"Option 3"}/>

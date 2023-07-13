@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import "../Styles2/Ball.scss"
 
-const Ball = ({position, isMoving, isBounce}) => {
-
-    const [posX,setPosX] = useState(80);
+const Ball = ({position, bounce}) => {
     // useEffect(()=>{
 
     // },[position])
@@ -14,7 +12,7 @@ const Ball = ({position, isMoving, isBounce}) => {
     const distanceY = endCoordinates.y - startCoordinates.y;
 
     const animationStyle = {
-        animation: `moveBall 3s linear forwards`,
+        // animation: `bounce 3s infinite`,
         transition: `3s all`,
         transform: `translate(${distanceX}px, ${distanceY}px) rotate(360deg)`,
     };
@@ -22,7 +20,7 @@ const Ball = ({position, isMoving, isBounce}) => {
 
     return (
         <>
-            <div  className="ball" style={animationStyle}></div>
+            <div  className={"ball "} style={bounce ? undefined :animationStyle}></div>
         </>
     )
 }
